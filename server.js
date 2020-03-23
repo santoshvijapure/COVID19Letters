@@ -20,17 +20,21 @@ mongoose.connect(mongoURL, {
   }
 })
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended : true}));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({
+//     extended: true
+// }));
+// app.use(express.urlencoded({ extended: true }))
 
-// Parse URL-encoded bodies (as sent by HTML forms)
-app.use(express.urlencoded());
-app.use(express.urlencoded({ extended: true }))
+// // Parse URL-encoded bodies (as sent by HTML forms)
+// app.use(express.urlencoded());
+// app.use(express.urlencoded({ extended: true }))
 
 
-app.set('view engine', 'ejs')
+// app.set('view engine', 'ejs')
 app.use((req,res,next)=>{
   res.header("Access-Control-Allow-Origin","*")
   res.header("Access-Control-Allow-headers","Origin,X-Requested-with,Content-Type,Accept")
@@ -48,12 +52,17 @@ app.get('/',  (req, res) => {
     // })
 })
 
+
+
+//to wipe evrything 
+// Letters.remove(()=>{
+// console.log("wiped");
+// })
 //routes
 const letters =require("./routes/letters")
 app.use(letters)
 const searchRoutes=require("./routes/search")
 app.use(searchRoutes)
-
 
 //reduirection the shortlink to full link
 

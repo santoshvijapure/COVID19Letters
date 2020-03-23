@@ -7,10 +7,12 @@ module.exports= router.post("/new",(req,res)=>{
         from: req.body.from,
         to : req.body.to,
         content : req.body.content
-    },(err)=>{
+    },(err,data)=>{
         if (err) {
             console.error(err);
         } else {
+            console.log(data);
+            
             res.redirect("/")
         }
     })

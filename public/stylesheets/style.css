@@ -28,47 +28,6 @@ div.b {
 #more11 {display: none;}
  
 
-p.ex2 {
-    margin-top: 35px; 
-    margin-left: 135px;
-     
-  }
-
-select.ex3 {
-   margin-left: 135px;
- } 
-
-label.ex4 {
-   margin-left: 135px;
-   margin-top: 30px;
- } 
-
- 
-button.ex6 {
-   margin-left: 135px;
-   margin-bottom: 200px;
-   margin-top: 20px;    
- }
-
-div.ex7 {
-  width: 200px;
-  padding: 2px;
-  border: 5px solid gray;
-  margin: 0;
-}
-
-textarea.ex8 {
-  width: 500px;
-  height: 150px;
-  margin-left: 135px;
-}
-
-div.ex9 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
-}   
  
 
  
