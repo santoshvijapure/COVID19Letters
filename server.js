@@ -12,7 +12,7 @@ var mongoURL=require("./config/config").mongoUrl
 mongoose.connect(mongoURL, {
    useUnifiedTopology: true,
    useNewUrlParser: true 
-},(err)=>{
+},(err)=>{        
   if (err) {
     console.log('err', err)
   } else {  
@@ -36,15 +36,16 @@ app.use((req,res,next)=>{
   res.header("Access-Control-Allow-headers","Origin,X-Requested-with,Content-Type,Accept")
   next()
 })
+app.use(express.static("public"));
 
 //root route
-app.get('/', async (req, res) => {
-    
-      res.json({
-      statusCode:200,
-      messege:"API working Properly"
+app.get('/',  (req, res) => {
+    res.redirect("/all")
+    //   res.json({
+    //   statusCode:200,
+    //   messege:"API working Properly"
 
-    })
+    // })
 })
 
 //routes

@@ -3,11 +3,11 @@ var router = express.Router();
 var Letter = require("../models/Letter")
 
 module.exports=router.get("/all",(req,res)=>{
-    Letter.find({},(err,Letter)=>{
+    Letter.find({},(err,data)=>{
         if (err) {
             console.log(err);
         } else {
-            res.send(Letter)
+            res.render("index",{data})
         }
     })
 })
