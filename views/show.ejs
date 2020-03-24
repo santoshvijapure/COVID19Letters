@@ -1,10 +1,21 @@
 
 <%- include ('./partials/header') %>
 
-<div class="jumbotron">
-    <h1>
-        <%= letter.content%>
-    </h1>
+<div class="jumbotron covor-screen">
+    <div class="container">
+        <h2 class="text-right">From : <%= Letter.from %> </h2> 
+        <h2>To : <%= Letter.to %> </h2> 
+            <br>
+            <br>
+
+            <p>
+                <%= Letter.content %>
+            </p>
+            <!-- <hr /> -->
+            <div class="text-right">
+                <b> <%-  Letter.date.toDateString() %></b>
+            </div>
+            </div>
 </div>
 
  

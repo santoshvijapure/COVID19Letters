@@ -42,6 +42,7 @@ app.use((req,res,next)=>{
 })
 app.use(express.static("public"));
 
+
 //root route
 app.get('/',  (req, res) => {
     res.redirect("/all")
@@ -59,12 +60,16 @@ app.get('/',  (req, res) => {
 // console.log("wiped");
 // })
 //routes
+
+
+const navigation = require('./routes/navigation')
+app.use(navigation) 
 const letters =require("./routes/letters")
 app.use(letters)
 const searchRoutes=require("./routes/search")
 app.use(searchRoutes)
 
-//reduirection the shortlink to full link
+
 
 PORT=process.env.PORT || 3000
 app.listen(PORT,()=>{

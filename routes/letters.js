@@ -12,7 +12,6 @@ module.exports= router.post("/new",(req,res)=>{
             console.error(err);
         } else {
             console.log(data);
-            
             res.redirect("/")
         }
     })

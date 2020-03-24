@@ -11,6 +11,11 @@
 <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
 
 
+<!-- -------------------font awesome------------------- -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+ 
+
+
 </head>
 <script>
 
@@ -24,7 +29,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="#"><b>COVID Letters</b></a>
+<a class="navbar-brand" href="/"><b>COVID Letters</b></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -32,25 +37,31 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item active">
-<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item active">
-<a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+<a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
 </li>
  
 <li class="nav-item active">
-<a class="nav-link" href="#">Privacy Policy<span class="sr-only">(current)</span></a>
+<a class="nav-link" href="/privacyPolicy">Privacy Policy<span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item active">
-<a class="nav-link" href="#">Team<span class="sr-only">(current)</span></a>
+<a class="nav-link" href="/team">Team<span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item active">
-<a class="nav-link" href="#">Contribute <span class="sr-only">(current)</span></a>
+<a class="nav-link" href="/contribute">Contribute <span class="sr-only">(current)</span></a>
 </li>
 </ul>
-<form method="GET" action="/country" class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="text" name="country"  placeholder="Enter a country" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Browse all country-wise letters</button>
+<form onsubmit="event.preventDefault();" class="form-inline my-2 my-lg-0">
+    <input id="countryName" class="form-control mr-sm-2" type="text" name="country"  placeholder="Enter a country" aria-label="Search">
+    <button onclick=search() class="btn btn-outline-success my-2 my-sm-0" >Browse all country-wise letters</button>
 </form>
 </div>
 </nav>
+<script>
+function search() {
+    cName=document.getElementById("countryName").value
+    window.location="/country/"+cName
+}
+</script>
