@@ -67,3 +67,14 @@ div.b {
    padding-bottom: 30px;
 }
 
+.countryCount{
+  background: #d9d9d9 !important;
+  margin: 3px;
+  padding:3px;
+  color: black;
+}
+
+
+.capitalize {
+  text-transform: capitalize;
+}

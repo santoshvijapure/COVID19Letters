@@ -7,7 +7,7 @@ var Letters = require("./models/Letter")
 //mongoose setup
 
 const mongoose = require('mongoose')
-var mongoURL=require("./config/config").mongoUrl
+var mongoURL=require("./config1/config").mongoUrl
 
 mongoose.connect(mongoURL, {
    useUnifiedTopology: true,
@@ -56,9 +56,9 @@ app.get('/',  (req, res) => {
 
 
 //to wipe evrything 
-// Letters.remove(()=>{
-// console.log("wiped");
-// })
+ //Letters.remove(()=>{
+ //console.log("wiped");
+ //})
 //routes
 
 

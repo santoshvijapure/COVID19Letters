@@ -4,11 +4,20 @@ var Letter = require("../models/Letter")
 
 
 module.exports=router.get("/all",(req,res)=>{
-    Letter.find({}).sort('-date').exec((err,letters)=>{
+
+    
+    Letter.find({}).sort('-date').limit(18).exec((err,letters)=>{
         if (err) {
             console.log(err);
         } else {
-            res.render("index",{letters})
+            Letter.find({}).sort('-date').exec((err,countryLetters)=>{
+                if (err) {
+                    console.log(err);
+                } else {
+                  
+                    res.render("index",{ letters ,countryLetters})
+                }
+            })
         }
     })
 })
@@ -30,12 +39,20 @@ module.exports=router.get("/all",(req,res)=>{
 // })
 
 module.exports=router.get("/country/:to",(req,res)=>{
+    var countryLetters;
     Letter.find({ to: req.params.to}).sort('-date').exec((err,letters)=>{
         if (err) {
             console.log(err);
         } else {
+            Letter.find({}).sort('-date').exec((err,countryLetters)=>{
+                if (err) {
+                    console.log(err);
+                } else {
+                  
+                    res.render("index",{ letters ,countryLetters})
+                }
+            })
 
-            res.render("index",{ letters })
         }
     })
 })

@@ -6,8 +6,31 @@
 
 
 <%if(letters.length!=0){%>
+  <%
+  countries={}
+  <!-- console.log(countries) -->
+  countryLetters.forEach((letter)=>{
+    country=letter.to
+    <!-- console.log(country) -->
+    if(countries[country] !=undefined){
+      countries[country]= countries[country]+1
+    }else{
+      countries[country]=1
+    }
+  })
+  %>
+  
+  <div class="b"><h2>We all are in this together</h2></div>
 
-<div class="b"><h4>We all are in this together</h4></div>
+  <div class="container">
+    <p>Country wise count of received letters</p>
+      <%
+      for(key in countries){
+        value= countries[key]%>
+        <span class="countryCount capitalize"><a href="/country/<%= key %>"> <%=key%>( <%= value %>) </a> </span>
+      <%}%>
+  
+    </div>
 
 <div class="a"><h2><b>Latest Letters</b></h2></div>
 
@@ -16,8 +39,8 @@
     <% letters.forEach((letter)=>{ %>
       <div class="card bg-light">
           <ul class="list-group list-group-flush">
-          <li class="list-group-item">From: <%= letter.from %> </li>
-          <li class="list-group-item">TO: <%= letter.to%></li>
+          <li class="list-group-item capitalize">From: <%= letter.from%> </li>
+          <li class="list-group-item capitalize">TO: <%= letter.to%></li>
           </ul>
           <div class="card-body text-left">
           <p class="card-text">
