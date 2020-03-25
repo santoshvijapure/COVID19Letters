@@ -11,6 +11,9 @@ module.exports = router
                     .get("/privacyPolicy",(req,res)=>{
                         res.render("privacyPolicy")
                     })
+                    .get("/help",(req,res)=>{
+                        res.render("help")
+                    })
                     .get("/contribute",(req,res)=>{
                         res.render("contribute")
                     })
