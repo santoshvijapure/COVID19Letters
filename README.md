@@ -1,1 +1,2 @@
-# COVID19Letters
+COVID Letters is a platform on which you can anonymously write open letters to all the countries you wish to send love and positivity in this difficult time. People from different corners of the world can see your letter (don't worry you will stay anonymous). You can also view all the country-wise letters that people have written. Writing letters is the best way to show support for each other, spread hope, and send prayers. As you write letters, you will be helping a lot of people to stay positive and feel better. 
+
