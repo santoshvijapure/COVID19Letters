@@ -7,7 +7,7 @@ var Letters = require("./models/Letter")
 //mongoose setup
 
 const mongoose = require('mongoose')
-var mongoURL=require("./config1/config").mongoUrl
+var mongoURL=require("./config/config").mongoUrl
 
 mongoose.connect(mongoURL, {
    useUnifiedTopology: true,
@@ -23,7 +23,7 @@ mongoose.connect(mongoURL, {
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({
 //     extended: true
 // }));

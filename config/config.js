@@ -1,3 +1,3 @@
 module.exports={
-    // mongoUrl:<Enter your mongo key here>
+    mongoUrl:"mongodb+srv://root:root@cluster0-iuz5o.mongodb.net/letters"
 }
