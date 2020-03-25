@@ -17,3 +17,4 @@ module.exports = router
                     .get("/contribute",(req,res)=>{
                         res.render("contribute")
                     })
+                    

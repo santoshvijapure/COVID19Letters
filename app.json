@@ -1,0 +1,7 @@
+{
+  "name": "Start on Heroku: Node.js",
+  "description": "COVID-19 letters",
+  "repository": "https://github.com/santoshvijapure/COVID19Letters",
+  "keywords": ["node", "express", "heroku","react"],
+  "image": "heroku/nodejs"
+}

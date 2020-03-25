@@ -1,6 +1,7 @@
 <hr />
 
-<form  method="post" class="container" action="/new" >
+<form id="form" method="post" class="container" action="/new" >
+    
     <p class="ex2">To: <i>select the country you want to write the letter for</i></p>
     <select id="to" name="to" class="form-control">
 
@@ -260,7 +261,7 @@
         <option value='<%= countries[i] %>'><%= countries[i] %></option>
       <% } %>
     </select>
-
+    <br>
     <p class="ex2">From: <i>select your country</i></p>
     <select id="from" name="from" class="form-control">
 
@@ -522,8 +523,9 @@
       </select>
       
       <div class="form-group">
-      <label for="comment" class="ex4">Submit a letter!</label>
-      <textarea class="form-control"  required  rows="8" name="content" style="font-size: 1.3em !important ;" ></textarea>
+          <br>
+      <!-- <label for="comment" class="ex4">Submit a letter!</label> -->
+      <textarea class="form-control" placeholder="Write your Love to support this country !!!"  required  rows="8" name="content" style="font-size: 1.3em !important ;" ></textarea>
       </div>
     <center>  <button type="submit" required  class=" text-center btn btn-dark btn-lg ex6">Submit</button> </center>
 
