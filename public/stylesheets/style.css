@@ -78,3 +78,7 @@ div.b {
 .capitalize {
   text-transform: capitalize;
 }
+
+.country-stats{
+  max-width: 100% !important;
+}
