@@ -7,7 +7,7 @@
 
 <%if(letters.length!=0){%>
 
-<div class="b"><h4>We all are in this together</h4></div>
+<div class="b"><h4>We all are in this together <i class="fa fa-heart" style="font-size:30px;color:red"></i></h4></div>
 
 <div class="a"><h2><b>Latest Letters</b></h2></div>
 
@@ -17,7 +17,7 @@
       <div class="card bg-light">
           <ul class="list-group list-group-flush">
           <li class="list-group-item">From: <%= letter.from %> </li>
-          <li class="list-group-item">TO: <%= letter.to%></li>
+          <li class="list-group-item">To: <%= letter.to%></li>
           </ul>
           <div class="card-body text-left">
           <p class="card-text">
