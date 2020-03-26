@@ -22,13 +22,8 @@
   <div class="b"><h2>We all are in this together <i class="fa fa-heart" style="font-size:30px;color:red"></i></h2></div>
 
   <div class="container">
-    <p>Country-wise count of letters  received</p>
-      <%
-      for(key in countries){
-        value= countries[key]%>
-        <span class="countryCount capitalize"><a href="/country/<%= key %>"> <%=key%>( <%= value %>) </a> </span>
-      <%}%>
-  
+    <p><center>Write a letter to spread love and positivity!</center></p>
+       
       <br>
       <br>
     <center>  
@@ -41,12 +36,7 @@
   <div class="card-columns">
     <% letters.forEach((letter)=>{ %>
       <div class="card bg-light">
-          <ul class="list-group list-group-flush">
-
-          <li class="list-group-item capitalize">From: <%= letter.from%> </li>
-          <li class="list-group-item capitalize">To: <%= letter.to%></li>
-
-          </ul>
+           
           <div class="card-body text-left">
           <p class="card-text">
             <%= letter.content.substring(0,100) %> ....
