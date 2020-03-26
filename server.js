@@ -45,7 +45,7 @@ app.use(express.static("public"));
 
 //root route
 app.get('/',  (req, res) => {
-    res.redirect("/all")
+    res.redirect("/home")
     //   res.json({
     //   statusCode:200,
     //   messege:"API working Properly"
@@ -56,9 +56,9 @@ app.get('/',  (req, res) => {
 
 
 //to wipe evrything 
- //Letters.remove(()=>{
- //console.log("wiped");
- //})
+//  Letters.remove(()=>{
+//  console.log("wiped");
+//  })
 //routes
 
 

@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 const letterScheema = new mongoose.Schema({
-    from:{
-        type: String,
-        required: true
-    },
-    to:{
-        type: String,
-        required: true
-    },
+    // from:{
+    //     type: String,
+    //     required: true
+    // },
+    // to:{
+    //     type: String,
+    //     required: true
+    // },
     content: {
         type: String,
         required: true

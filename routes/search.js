@@ -3,7 +3,7 @@ var router = express.Router();
 var Letter = require("../models/Letter")
 
 
-module.exports=router.get("/all",(req,res)=>{
+module.exports=router.get("/home",(req,res)=>{
 
     
     Letter.find({}).sort('-date').limit(18).exec((err,letters)=>{
@@ -21,6 +21,25 @@ module.exports=router.get("/all",(req,res)=>{
         }
     })
 })
+module.exports=router.get("/all",(req,res)=>{
+
+    
+    Letter.find({}).sort('-date').exec((err,letters)=>{
+        if (err) {
+            console.log(err);
+        } else {
+            Letter.find({}).sort('-date').exec((err,countryLetters)=>{
+                if (err) {
+                    console.log(err);
+                } else {
+                  
+                    res.render("index",{ letters ,countryLetters})
+                }
+            })
+        }
+    })
+})
+
 
 
 // module.exports=router.get("/country",(req,res)=>{
