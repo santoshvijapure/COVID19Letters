@@ -3,7 +3,7 @@ const app = express()
 var bodyParser=require("body-parser")
 var path = require("path");
 var Letters = require("./models/Letter")
-
+const fs = require('fs');
 //mongoose setup
 
 const mongoose = require('mongoose')
@@ -55,11 +55,7 @@ app.get('/',  (req, res) => {
 
 
 
-//to wipe evrything 
-//  Letters.remove(()=>{
-//  console.log("wiped");
-//  })
-//routes
+
 
 
 const navigation = require('./routes/navigation')
@@ -69,6 +65,27 @@ app.use(letters)
 const searchRoutes=require("./routes/search")
 app.use(searchRoutes)
 
+
+app.get('/downloadAll', (req, res) => {
+  Letters.find({},(err,data)=>{
+    if (err) {
+      console.log(err);
+      res.redirect("/")
+    } else {
+      let output=[]
+      output.push(data)
+      let name=Date().substr(4,11)+".json"
+      fs.writeFile(name,output,(err)=>{
+        if (err) {
+          console.log(err);
+        } else {
+        res.download(name)
+        }
+      })
+
+    }
+  })
+});
 
 
 PORT=process.env.PORT || 3000
