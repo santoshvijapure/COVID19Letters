@@ -7,8 +7,7 @@ const fs = require('fs');
 //mongoose setup
 
 const mongoose = require('mongoose')
-var mongoURL=require("./config/config").mongoUrl
-
+var mongoURL=process.env.MONGODB_URI
 mongoose.connect(mongoURL, {
    useUnifiedTopology: true,
    useNewUrlParser: true 
@@ -24,17 +23,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({
-//     extended: true
-// }));
-// app.use(express.urlencoded({ extended: true }))
 
-// // Parse URL-encoded bodies (as sent by HTML forms)
-// app.use(express.urlencoded());
-// app.use(express.urlencoded({ extended: true }))
-
-
-// app.set('view engine', 'ejs')
 app.use((req,res,next)=>{
   res.header("Access-Control-Allow-Origin","*")
   res.header("Access-Control-Allow-headers","Origin,X-Requested-with,Content-Type,Accept")
