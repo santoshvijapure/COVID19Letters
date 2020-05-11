@@ -97,13 +97,3 @@ module.exports=router.get("/show/:id",(req,res)=>{
     })
 })
 
-module.exports=router.get("/deleteOne/:id",(req,res)=>{
-    Letter.findByIdAndDelete(req.params.id, (err,Letter)=>{
-        if (err) {
-            console.log(err);
-            res.redirect("/")
-        } else {
-            res.redirect("/");
-        }
-    })
-})
