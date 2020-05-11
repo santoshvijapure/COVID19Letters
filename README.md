@@ -1,2 +1,13 @@
-COVID Letters is a platform on which you can anonymously write open letters to all the countries you wish to send love and positivity in this difficult time. People from different corners of the world can see your letter (don't worry you will stay anonymous). You can also view all the country-wise letters that people have written. Writing letters is the best way to show support for each other, spread hope, and send prayers. As you write letters, you will be helping a lot of people to stay positive and feel better. 
+## COVID Letters: Spreading positivity in the age of COVID 
 
+COVID Letters is a platform where every one of us can write anonymous letters to spread love and positivity, and help others combat loneliness and anxiety during this pandemic. Writing letters is the best way to show support for each other, spread hope, and send prayers. As you write letters, you will be helping a lot of people to stay positive and feel better. When in need of some love and positivity, you can come here to read letters contributed by others. We all are in this together 
+
+---
+### Tech stack
+- Bootstrap 
+- Nodejs 
+- MongoDB 
+
+---
+
+Note: If you find any bug or wish to propose any new feature or want to make the platform look better, please consider starting an issue or a PR. 
