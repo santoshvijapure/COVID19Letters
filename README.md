@@ -14,6 +14,7 @@ COVID Letters is a platform where every one of us can write anonymous letters to
 - Bootstrap 
 - Nodejs 
 - MongoDB 
+- Hosted on Heroku
 
 ---
 
